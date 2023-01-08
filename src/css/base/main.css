@@ -5,7 +5,10 @@ body {
   
 }
 
-
+video {
+  max-width: 100%;
+  height: auto;
+}
 
 h1 {
   font-size: 42px;
