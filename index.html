@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen:false}" : class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.F. All Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="titre-menu"><a href="index-FR.html">F.F. All Time</a></h1>
+        <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
+            <div class="nav-toggle-bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index-FR.html">Accueil</a></li>
+                <li><a href="page-Article-Lieu-FR.html">Article - Parc des princes</a></li>
+                <li><a href="page-Article-Livre-FR.html">Article - Mbappé, le phénomène</a></li>
+                <li><a href="page-Article-Film-FR.html">Article - Les Yeux dans les Bleus</a></li>
+                <li><a href="page-Article-Musique-FR.html">Article - L'hymne de la Victoire</a></li>
+                <li><a href="page-Article-Espoir-FR.html">Article - Mbappé, le futur ballon d'or</a></li>
+                <li><a href="page-Article-Regret-FR.html">Article - Hatem Ben Arfa, le talent gâché</a></li>
+                <li><a href="a-propos-FR.html">A propos</a></li>
+                <li><a href="contact-FR.html">Contact</a></li>
+    
+                <div class="btn-lang">
+                    <li><a href="index-EN.html"><img src="./public/icon/uk 1.webp" alt="#"></a></li>
+                    <li><a href="index-FR.html"><img src="./public/icon/Fr-removebg-preview 1.webp" alt="#"></a></li>
+                </div>
+            </ul>
+        </nav>
+        <div id="trait_dessus"><hr></div>
+    </header>
+
+    <main>
+        <h3 class="titre-carrousel">Nos Articles du moment</h3>
+        <div class="carrousel-a">      
+            <div class="carrousel" x-data="{hrefCourant:'#ecran-1',}">
+                <button @click="const p =$refs.parent ;  p.scrollLeft-= p.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt;</button><button @click="const p =$refs.parent ;  p.scrollLeft+= p.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+                <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+
+                                [...$refs.parent.children]
+                                .find(e=>e.getBoundingClientRect().x>=0)
+                                .id">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/Lieu.webp" alt="image ecran 1">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/Espoir.webp" alt="image ecran 2">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/Regret.webp" alt="image ecran 3">
+                        </figure>
+                    </div>
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/Musique-projet 1.webp" alt="image ecran 4">
+                        </figure>
+                    </div>
+                    <div id="ecran-5" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/carrousel-Livre.jpg" alt="image ecran 5">
+                        </figure>
+                    </div>
+                    <div id="ecran-6" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/carrousel-Film.jpg" alt="image ecran 6">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="titre-section-article">Introduction</h5>
+
+        
+        <div class="texte-article-accueil">
+
+            <img class="img-article-accueil" src="public/img/Mbappe-BO-Intro 1.webp" alt="#">
+            <div class="col-size">
+                <h2 class="titre-article-accueil">Mbappé, le futur ballon ? </h2>  
+                <p class="text-accueil">
+                    À tout juste 23 ans, Kylian pourrai devenir le futur Ballon d’Or, il est devenu le plus grand Espoir  Français ,
+                    ce serai une première depuis Zidane en 1998.
+                </p> 
+                <a href="page-Article-Espoir-FR.html"><button class="ensavoirplusbtn">Lire Plus</button></a>
+            </div>
+            <br>
+            <div ><hr></div>
+            <br>
+            <img class="img-article-accueil" src="public/img/Hatem 1.webp" alt="#">
+            <div class="col-size">
+                <h2 class="titre-article-accueil">Hatem Ben Arfa, une carrière gâchée ?</h2>  
+                <p class="text-accueil">
+                    Découvrez la carrière d’Hatem Ben Arfa,
+                    dans le meilleur comme dans le pire, depuis 
+                    son arrivé au PSG, de héro à zéro...
+                </p> 
+                <a href="page-Article-Regret-FR.html"><button class="ensavoirplusbtn">Lire Plus</button></a>
+            </div>
+            <br>
+            <div ><hr></div>
+            <br>
+            <img class="img-article-accueil" src="public/img/Lieu-article-accueil.jpg" alt="#">
+            <div class="col-size">
+                <h2 class="titre-article-accueil">Le Parc des Prince</h2>   
+                <p class="text-accueil">
+                    L’un des Stades les plus emblématique de Ligue 1,
+                    grâce à cet article apprenez en plus sur ses origines
+                    et ses différentes histoires.
+                </p> 
+                <a href="page-Article-Lieu-FR.html"><button class="ensavoirplusbtn">Lire Plus</button></a>
+            </div>
+            <br>
+            <div ><hr></div>
+            <br>
+            <img class="img-article-accueil" src="public/img/Musique-projet 1.webp" alt="#">
+            <div class="col-size">
+                <h2 class="titre-article-accueil">L'hymne de la Victoire des Bleus</h2>   
+                <p class="text-accueil">
+                    Le nouvelle Hymne de la victoire de la Coupe du Monde 2018,
+                    c’est surêment la référence musicale pour cette belle victoire 
+                    en représentant chacun de ces joueurs grandioses.
+                </p> 
+                <a href="page-Article-Lieu-FR.html"><button class="ensavoirplusbtn">Lire Plus</button></a>
+            </div>
+            <br>
+            <div ><hr></div>
+            <br>
+            <img class="img-article-accueil" src="public/img/Yeux-ds-Bleu-Intro 1.webp" alt="#">
+            <div class="col-size">
+                <h2 class="titre-article-accueil">Les Yeux dans les Bleus</h2>  
+                <p class="text-accueil">
+                    Ce Film documentaire va vous immergé dans la Coupe du Monde 1998,
+                    en nous insérant dans la vie des joueurs et dans cette compétition 
+                    époustouflante. 
+                </p> 
+                <a href="page-Article-Lieu-FR.html"><button class="ensavoirplusbtn">Lire Plus</button></a>
+            </div>
+            <br>
+            <div ><hr></div>
+            <br>
+    
+            <img class="img-article-accueil" src="public/img/Mbappe-Le-phenomene-paysage-min 1.webp" alt="#">
+            <div class="col-size">
+                <h2 class="titre-article-accueil">Mbappé, Le Phénomène</h2>  
+                <p class="text-accueil">
+                    À travers, ce livre découvrais la carrière de ce jeune français
+                    qui fait trembler le football international, depuis ses débuts,
+                    jusqu’à son arriver au sommet.
+                </p> 
+                <a href="page-Article-Lieu-FR.html"><button class="ensavoirplusbtn">Lire Plus</button></a>
+            </div>
+            <br>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <a class="footer__lien_title" href="/index.html">
+            <h1 class="footer__title">F.F. All Time</h1>
+        </a> 
+
+        <nav class="footer__menu">
+            <ul class="list-unstyled">
+                <li><a class="footer__menu-item" href="index-FR.html">Accueil</a></li>
+                <li><a class="footer__menu-item" href="contact-FR.html">Contact</a></li>
+                <li><a class="footer__menu-item" href="a-propos-FR.html">à propos</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer__description">
+            <p>Yassir Ouadghiri <br> MMi1 TD B2</p>
+            <br>
+            <a class="footer__link" href="mailto:yassir.ouadghiri@edu.univ-fcomte.fr">yassir.ouadghiri@edu.univ-fcomte.fr</a>
+            <img class="footer__logo" src="/public/img/logo-MMI-blanc.jpg" alt="Logo MMi">
+            <p><em>Ceci est une maquette réalisé dans le cadre d’un exercice pédagoquide aux département MMI de Montbéliard.</em></p>
+        </div>
+        
+
+    </footer>
+</body>
+</html>
