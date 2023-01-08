@@ -1,7 +1,7 @@
-- NOM : 
-- PRÉNOM :
-- URL du site :
-- URL FIGMA :
+- NOM : Ouadghiri
+- PRÉNOM : Yassir
+- URL du site :  http://f.f-all-time.yassirodh.fr/
+- URL FIGMA : https://www.figma.com/file/TNV2gjn4TWnso8sEoOcPg5/Maquettes-projet-individuel-%E2%80%94-Yassir-Ouadghiri?node-id=817%3A853&t=F8BLw6clhoFIf5Fb-1
 
 # Structure de départ pour le projet individuel.
 
