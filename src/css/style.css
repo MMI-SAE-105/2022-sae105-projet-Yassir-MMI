@@ -29,3 +29,14 @@ Soyez attentifs à l'ordre d'import :
 @import "components/menu.css";
 @import "components/carrousel.css";
 
+html {
+  background-color: #0C3153;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
